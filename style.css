@@ -1,0 +1,348 @@
+html {
+    font-size: 100%;
+}
+
+body, html {
+    width: 100%; height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: #000;
+}
+
+.name {
+    line-height: 70px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.galaxy {
+    height: 100%;
+    width: 100%;
+    background: #434040;
+    position: fixed;
+    perspective: 4000;
+    background: url('universe.jpg');
+    background-repeat: no-repeat;
+}
+
+.system {
+    margin: auto;
+    margin-top: 100px;
+    height: 50%;
+    width: 65%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.planet {
+    background: #000;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+	box-shadow: 0px -10px 20px 5px black inset, 0px 0px 20px 1px black;
+	transition: all 0.5s linear 0s;
+	z-index: 3;
+}
+
+.orbit {
+	width: 42rem;
+	height: 17rem;
+	border: 3px solid white;
+	border-radius: 50%;
+	transform-style: preserve-3d;
+	z-index: 2;
+	position: absolute;
+	margin: auto;
+	top: 0; bottom: 0; right: 0; left: 0;
+}
+
+.planet h2 {
+    text-align: center;
+    text-transform: uppercase;
+ 	text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.left {
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    transform: translateX(-20rem);
+}
+
+.right {
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    transform: translateX(20rem);
+}
+
+.front {
+    width: 12rem;
+    height: 12rem;
+    line-height: 12rem;
+    transform: translateY(8rem);
+}
+
+.back {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    transform: translateY(-8rem);
+}
+
+.works {
+	background: url('2.png');
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    animation: planetRotation 10s linear infinite;
+}
+
+.skills {
+	background: url('1.png');
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    animation: planetRotation 10s linear infinite;
+}
+
+.about {
+	background: url('3.png');
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    animation: planetRotation 10s linear infinite;
+}
+
+.contact {
+	background: url('4.png');
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    animation: planetRotation 10s linear infinite;
+}
+
+@keyframes planetRotation {
+	from { background-position: 0 0; }
+	to { background-position: 67% 0; }
+}
+
+@keyframes frontToLeft {
+	0% {
+		width: 12rem;
+		height: 12rem;
+		line-height: 12rem;
+		transform: translateY(8rem);
+	}
+	33% {
+		width: 10.5rem;
+		height: 10.5rem;
+		line-height: 10.5rem;
+		transform : translateY(7rem) translateX(-6rem);
+	}
+	66% {
+		width: 9.5rem;
+		height: 9.5rem;
+		line-height: 9.5rem;
+		transform : translateY(5.5rem) translateX(-15rem);
+	}
+	100% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(-20rem);
+	}
+}
+
+@keyframes leftToBack {
+	0% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(-20rem);
+	}
+	33% {
+		width: 7rem;
+		height: 7rem;
+		line-height: 7rem;
+		transform : translateY(-6rem) translateX(-15rem);
+	}
+	66% {
+		width: 6rem;
+		height: 6rem;
+		line-height: 6rem;
+		transform : translateY(-7.5rem) translateX(-6rem);
+	}
+	100% {
+		width: 5rem;
+		height: 5rem;
+		line-height: 5rem;
+		transform: translateY(-8rem);
+	}
+}
+
+@keyframes backToRight {
+	0% {
+		width: 5rem;
+		height: 5rem;
+		line-height: 5rem;
+		transform: translateY(-8rem);
+	}
+	33% {
+		width: 6rem;
+		height: 6rem;
+		line-height: 6rem;
+		transform : translateY(-7.5rem) translateX(6rem);
+	}
+	66% {
+		width: 7rem;
+		height: 7rem;
+		line-height: 7rem;
+		transform : translateY(-6rem) translateX(15rem);
+	}
+	100% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(20rem);
+	}
+}
+
+@keyframes rightToFront {
+	0% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(20rem);
+	}
+	33% {
+		width: 9.5rem;
+		height: 9.5rem;
+		line-height: 9.5rem;
+		transform : translateY(5.5rem) translateX(15rem);
+	}
+	66% {
+		width: 10.5rem;
+		height: 10.5rem;
+		line-height: 10.5rem;
+		transform : translateY(7rem) translateX(6rem);
+	}
+	100% {
+		width: 12rem;
+		height: 12rem;
+		line-height: 12rem;
+		transform: translateY(8rem);
+	}
+}
+/* ----------------------- INVERSE ANIMATIONS ------------------------ */
+@keyframes leftToFront {
+	0% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(-20rem);
+	}
+	33% {
+		width: 9.5rem;
+		height: 9.5rem;
+		line-height: 9.5rem;
+		transform : translateY(5.5rem) translateX(-15rem);
+	}
+	66% {
+		width: 10.5rem;
+		height: 10.5rem;
+		line-height: 10.5rem;
+		transform : translateY(7rem) translateX(-6rem);
+	}
+	100% {
+		width: 12rem;
+		height: 12rem;
+		line-height: 12rem;
+		transform: translateY(8rem);
+	}
+}
+
+@keyframes backToLeft {
+	0% {
+		width: 5rem;
+		height: 5rem;
+		line-height: 5rem;
+		transform: translateY(-8rem);
+	}
+	33% {
+		width: 6rem;
+		height: 6rem;
+		line-height: 6rem;
+		transform : translateY(-7.5rem) translateX(-6rem);
+	}
+	66% {
+		width: 7rem;
+		height: 7rem;
+		line-height: 7rem;
+		transform : translateY(-6rem) translateX(-15rem);
+	}
+	100% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(-20rem);
+	}
+}
+
+@keyframes rightToBack {
+	0% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(20rem);
+	}
+	33% {
+		width: 7rem;
+		height: 7rem;
+		line-height: 7rem;
+		transform : translateY(-6rem) translateX(15rem);
+	}
+	66% {
+		width: 6rem;
+		height: 6rem;
+		line-height: 6rem;
+		transform : translateY(-7.5rem) translateX(6rem);
+	}
+	100% {
+		width: 5rem;
+		height: 5rem;
+		line-height: 5rem;
+		transform: translateY(-8rem);
+	}
+}
+
+@keyframes frontToRight {
+	0% {
+		width: 12rem;
+		height: 12rem;
+		line-height: 12rem;
+		transform: translateY(8rem);
+	}
+	33% {
+		width: 10.5rem;
+		height: 10.5rem;
+		line-height: 10.5rem;
+		transform : translateY(7rem) translateX(6rem);
+	}
+	66% {
+		width: 9.5rem;
+		height: 9.5rem;
+		line-height: 9.5rem;
+		transform : translateY(5.5rem) translateX(15rem);
+	}
+	100% {
+		width: 8rem;
+		height: 8rem;
+		line-height: 8rem;
+		transform: translateX(20rem);
+	}
+}
