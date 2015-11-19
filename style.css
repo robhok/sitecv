@@ -1,5 +1,5 @@
 html {
-    font-size: 100%;
+    font-size: 120%;
 }
 
 body, html {
@@ -8,14 +8,26 @@ body, html {
 
 .header {
     width: 100%;
-    height: 70px;
-    background: #000;
+    height: 8em;
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    font-size: 1rem;
 }
 
 .name {
-    line-height: 70px;
     text-align: center;
-    color: #ffffff;
+    color: rgba(255, 255, 255,1);
+    font-size: 1.5em;
+    line-height: 3em;
+}
+
+.helper {
+    text-align: center;
+    color: rgba(255, 255, 255,1);
+    font-size: 1.2rem;
+    line-height: 2em;
 }
 
 .galaxy {
@@ -30,26 +42,26 @@ body, html {
 
 .system {
     margin: auto;
-    margin-top: 100px;
     height: 50%;
     width: 65%;
-    position: relative;
+    position: fixed;
     transform-style: preserve-3d;
+    top: 0; right: 0; left: 0; bottom: 0;
 }
 
 .planet {
-    background: #000;
     border-radius: 50%;
     margin: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     color: white;
-	box-shadow: 0px -10px 20px 5px black inset, 0px 0px 20px 1px black;
-	transition: all 0.5s linear 0s;
+	box-shadow: 0px -10px 40px 10px black inset, 0px 0px 20px 1px black;
+	transition: opacity 0.5s ease 0s;
 	z-index: 3;
+}
+
+.planet:hover {
+    box-shadow: 0px -10px 40px 10px black inset, 0px 0px 4em -1em white;
 }
 
 .orbit {
@@ -75,6 +87,7 @@ body, html {
     height: 8rem;
     line-height: 8rem;
     transform: translateX(-20rem);
+    font-size: 0.8rem;
 }
 
 .right {
@@ -82,6 +95,7 @@ body, html {
     height: 8rem;
     line-height: 8rem;
     transform: translateX(20rem);
+    font-size: 0.8rem;
 }
 
 .front {
@@ -89,6 +103,7 @@ body, html {
     height: 12rem;
     line-height: 12rem;
     transform: translateY(8rem);
+    font-size: 1rem;
 }
 
 .back {
@@ -96,39 +111,49 @@ body, html {
     height: 5rem;
     line-height: 5rem;
     transform: translateY(-8rem);
+    font-size: 0.5rem;
+}
+
+.light {
+    width: 30%;
+    height: 30%;
+    background: -webkit-radial-gradient(white, rgba(0,0,0,0), rgba(0,0,0,0)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(white, rgba(0,0,0,0), rgba(0,0,0,0)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(white, rgba(0,0,0,0), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(white, rgba(0,0,0,0), rgba(0,0,0,0)); /* Standard syntax */
 }
 
 .works {
 	background: url('2.png');
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
-    animation: planetRotation 10s linear infinite;
+    animation: planetRotation 18s linear infinite;
 }
 
 .skills {
 	background: url('1.png');
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
-    animation: planetRotation 10s linear infinite;
+    animation: planetRotation 18s linear infinite;
 }
 
 .about {
 	background: url('3.png');
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
-    animation: planetRotation 10s linear infinite;
+    animation: planetRotation 18s linear infinite;
 }
 
 .contact {
 	background: url('4.png');
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
-    animation: planetRotation 10s linear infinite;
+    animation: planetRotation 18s linear infinite;
 }
 
 @keyframes planetRotation {
 	from { background-position: 0 0; }
-	to { background-position: 67% 0; }
+	to { background-position: 66.5% 0; }
 }
 
 @keyframes frontToLeft {
@@ -345,4 +370,10 @@ body, html {
 		line-height: 8rem;
 		transform: translateX(20rem);
 	}
+}
+
+@media only screen and (min-width: 1600px) {
+    html {
+        font-size: 150%;
+    }
 }
